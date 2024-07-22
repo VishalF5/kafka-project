@@ -52,13 +52,7 @@ services:
       - "3306:3306"
     networks:
       - kafka-net
-    volumes:
-      - mysql-data:/var/lib/mysql
 
 networks:
   kafka-net:
     driver: bridge
-
-volumes:
-  mysql-data:
-    driver: local
