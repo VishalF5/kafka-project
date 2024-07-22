@@ -1,7 +1,6 @@
 # Use the official Ubuntu base image
 FROM ubuntu:latest
 
-# Set environment variables to non-interactive (prevents prompts during build)
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Update package lists and install Python and pip
@@ -21,10 +20,10 @@ ENV PATH="/python/bin:$PATH"
 RUN pip3 install --upgrade pip
 
 # Copy all files from the current directory to /app in the container
-COPY . /app
+COPY . /kafka-project
 
 # Set the working directory to /app
-WORKDIR /app
+WORKDIR /kafka-project
 RUN mkdir logs
 
 # Install Python dependencies within the virtual environment

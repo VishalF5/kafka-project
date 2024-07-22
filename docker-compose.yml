@@ -9,7 +9,7 @@ services:
     networks:
       - kafka-net
     environment:
-      - LOGS_DIR=/app/logs
+      - LOGS_DIR=/kafka-project/logs
     depends_on:
       - kafka
       - mysql
